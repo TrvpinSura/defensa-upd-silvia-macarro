@@ -1,0 +1,360 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+/* @font-face {
+  font-family: "Playwrite ES";
+  src: url('/src/assets/fonts/Playwrite.woff2') format('woff2');
+  font-weight: 100 200 300 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url('/src/assets/fonts/Caveat.woff2') format('woff2');
+  font-weight: 400 500 600 700;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+@font-face {
+  font-family: "Patrick Hand";
+  src: url('/src/assets/fonts/PatrickHand.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amatic SC";
+  src: url('/src/assets/fonts/AmaticSC-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amatic SC";
+  src: url('/src/assets/fonts/AmaticSC-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Indie Flower";
+  src: url('/src/assets/fonts/IndieFlower.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+} */
+
+@theme {
+  /* FONTS */
+  --font-sans: 'Geist Variable', sans-serif;
+  --font-playwrite: "Playwrite ES", cursive;
+  --font-caveat: "Caveat", cursive;
+  --font-patrickhand: "Patrick Hand", cursive;
+  --font-amatic: "Amatic SC", sans-serif;
+  --font-indieflower: "Indie Flower", cursive;
+
+  /* BASE */
+  --color-cream: oklch(0.975 0.025 86);
+  --color-cream-soft: oklch(0.99 0.015 95);
+  --color-paper: oklch(0.965 0.018 78);
+  --color-paper-warm: oklch(0.95 0.03 75);
+
+  --color-border-soft: oklch(0.83 0.035 65);
+  --color-line-dashed: oklch(0.72 0.055 35);
+
+  /* ROJOS / ROSAS */
+  --color-pastel-red: oklch(0.78 0.105 25);
+  --color-pastel-red-soft: oklch(0.86 0.07 25);
+  --color-pastel-red-deep: oklch(0.569 0.152 25);
+
+  --color-pastel-pink: oklch(0.88 0.075 10);
+  --color-pastel-pink-soft: oklch(0.93 0.045 12);
+  --color-pastel-pink-deep: oklch(0.627 0.09 8);
+
+  --color-pastel-fuchsia: oklch(0.76 0.13 350);
+  --color-pastel-fuchsia-soft: oklch(0.86 0.085 350);
+  --color-pastel-fuchsia-deep: oklch(0.52 0.155 350);
+
+  --color-soft-coral: oklch(0.82 0.105 32);
+  --color-soft-coral-light: oklch(0.9 0.065 32);
+
+  /* VERDES */
+  --color-pastel-green: oklch(0.82 0.075 135);
+  --color-pastel-green-soft: oklch(0.91 0.045 135);
+  --color-pastel-green-deep: oklch(0.53 0.125 135);
+
+  --color-pastel-lime: oklch(0.85 0.105 125);
+  --color-pastel-lime-soft: oklch(0.92 0.065 125);
+  --color-pastel-lime-deep: oklch(0.545 0.111 125);
+
+  --color-pastel-olive: oklch(0.75 0.075 105);
+  --color-pastel-olive-soft: oklch(0.86 0.05 105);
+
+  --color-mint: oklch(0.88 0.055 165);
+  --color-mint-soft: oklch(0.94 0.035 165);
+
+  /* AZULES / TURQUESAS */
+  --color-pastel-blue: oklch(0.84 0.07 235);
+  --color-pastel-blue-soft: oklch(0.92 0.04 235);
+
+  --color-pastel-turquoise: oklch(0.82 0.085 185);
+  --color-pastel-turquoise-soft: oklch(0.91 0.05 185);
+  --color-pastel-turquoise-deep: oklch(0.50 0.105 185);
+
+  --color-deep-ink-blue: oklch(0.36 0.08 255);
+  --color-soft-ink-blue: oklch(0.48 0.07 245);
+
+  /* LILAS / MORADOS */
+  --color-pastel-lilac: oklch(0.82 0.075 300);
+  --color-pastel-lilac-soft: oklch(0.91 0.045 300);
+
+  --color-pastel-lavender: oklch(0.86 0.065 285);
+  --color-pastel-lavender-soft: oklch(0.94 0.035 285);
+
+  --color-soft-purple: oklch(0.72 0.09 292);
+  --color-soft-purple-dark: oklch(0.48 0.075 292);
+
+  /* AMARILLOS / NARANJAS / MARRONES */
+  --color-pastel-yellow: oklch(0.9 0.095 88);
+  --color-pastel-yellow-soft: oklch(0.96 0.055 88);
+
+  --color-pastel-orange: oklch(0.82 0.105 58);
+  --color-pastel-orange-soft: oklch(0.91 0.065 58);
+  --color-pastel-orange-deep: oklch(0.626 0.142 60.5);
+
+  --color-warm-gold: oklch(0.78 0.12 78);
+  --color-soft-gold: oklch(0.88 0.09 82);
+
+  --color-pastel-brown: oklch(0.68 0.06 58);
+  --color-pastel-brown-soft: oklch(0.82 0.045 62);
+
+  --color-beige: oklch(0.88 0.04 72);
+  --color-beige-soft: oklch(0.94 0.028 76);
+
+  --color-kraft-paper: oklch(0.78 0.065 60);
+  --color-kraft-paper-soft: oklch(0.88 0.045 65);
+
+  /* DECORATIVOS */
+  --color-stamp-border: oklch(0.72 0.06 38);
+  --color-washi-coral: oklch(0.83 0.09 25);
+  --color-washi-mint: oklch(0.84 0.07 170);
+  --color-washi-lavender: oklch(0.86 0.06 292);
+
+  /* SHADOWS */
+  --color-shadow-soft: oklch(0.72 0.025 75 / 0.35);
+}
+
+:root {
+  --background: oklch(0.985 0.018 88);
+  --foreground: oklch(0.25 0.045 255);
+
+  --primary: var(--color-soft-coral);
+  --primary-foreground: oklch(0.99 0.01 90);
+
+  --secondary: var(--color-pastel-turquoise-soft);
+  --secondary-foreground: var(--color-deep-ink-blue);
+
+  --accent: var(--color-pastel-lavender);
+  --accent-foreground: var(--color-deep-ink-blue);
+
+  --muted: var(--color-beige-soft);
+  --muted-foreground: oklch(0.48 0.035 250);
+
+  --card: oklch(0.985 0.018 88);
+  --card-foreground: oklch(0.28 0.045 255);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  --border: oklch(0.86 0.035 75);
+  --input: oklch(0.93 0.025 80);
+  --ring: var(--color-soft-coral);
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+    
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+    *::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+
+@layer components {
+  /* #region CustomNavLink */
+  .custom-nav-link {
+    @apply flex flex-col w-16 items-center transition-colors duration-200
+    md:w-20
+    xl:w-16;
+  }
+  .custom-nav-link[data-active="true"] {
+    @apply text-pastel-red;
+  }
+  .custom-nav-link[data-active="false"] {
+    @apply text-soft-ink-blue;
+  }
+  .custom-nav-link[data-active="false"]:hover {
+    @apply text-deep-ink-blue;
+  }
+
+  .custom-nav-link-image {
+    @apply h-10 w-10 object-contain transition-transform duration-200;
+  }
+  .custom-nav-link:hover .custom-nav-link-image {
+    @apply scale-105;
+  }
+
+  .custom-nav-link-label {
+    @apply font-playwrite text-base transition-transform duration-200 leading-none py-2 mt-1 
+    md:text-xl 
+    xl:text-lg;
+  }
+  .custom-nav-link:hover .custom-nav-link-label {
+    @apply -translate-y-1;
+  }
+
+  .custom-nav-link-underline {
+    @apply translate-y-0.5 h-0.75 rounded-full transition-all duration-200;
+  }
+  .custom-nav-link[data-active="true"] .custom-nav-link-underline {
+    @apply w-14 bg-pastel-red;
+  }
+  .custom-nav-link[data-active="false"] .custom-nav-link-underline {
+    @apply w-0;
+  }
+  .custom-nav-link[data-active="false"]:hover .custom-nav-link-underline {
+    @apply w-8 bg-deep-ink-blue;
+  }
+  /* #endregion */
+
+  /* #region Unit Layout */
+  .unit-layout-section-nav {
+    @apply fixed z-40
+    top-30 w-full px-4
+    md:top-46
+    lg:top-48
+    xl:top-60 xl:left-4 xl:right-auto xl:w-56 xl:px-0
+  }
+
+  .unit-layout-content {
+    @apply w-full px-4
+    pt-32
+    md:pt-48
+    lg:pt-50
+    xl:pt-2 xl:pl-64
+  }
+  /* #endregion */
+
+  /* #region CustomSectionNav */
+  .custom-section-nav {
+    @apply flex rounded-xl border-2 border-dashed border-pastel-brown/40 bg-cream/90 shadow-[0_20px_45px_-25px_oklch(0.35_0.08_60/0.6)]
+    overflow-x-auto px-3 py-2
+    xl:flex-col xl:overflow-visible xl:px-3 xl:py-4
+  }
+
+  .custom-section-nav-separator {
+    @apply shrink-0 border-dashed border-pastel-brown/50
+    h-0.5 w-6 mx-2 border-t-2
+    xl:h-4 xl:w-0.5 xl:mx-0 xl:my-1 xl:border-t-0 xl:border-l-2
+  }
+
+  .custom-section-nav-backdrop {
+  @apply pointer-events-none fixed inset-x-0 -z-10 top-0 bg-background
+  h-58
+  md:h-74
+  lg:h-76
+  xl:hidden
+}
+  /* #endregion */
+
+  /* #region CustomSectionNavItem */
+  .custom-section-nav-item {
+    @apply flex items-center justify-start px-2 py-1 shrink-0 shadow-sm rounded-xl bg-background/60 
+    flex-col w-28 h-23 gap-1
+    xl:flex-row xl:w-full xl:h-auto xl:gap-3
+    transition-all duration-200
+  }
+
+  .custom-section-nav-item[data-active="true"] {
+    color: var(--section-nav-item-color);
+    @apply ring-2 ring-current;
+  }
+
+  .custom-section-nav-item:hover {
+    @apply xl:hover:translate-x-0.5 xl:hover:translate-y-0
+  }
+
+  .custom-section-nav-item-image {
+    @apply h-11 w-11 shrink-0 object-contain 
+    transition-transform duration-200
+  }
+
+  .custom-section-nav-item:hover .custom-section-nav-item-image {
+    @apply scale-105
+  }
+
+  .custom-section-nav-item-label {
+    @apply font-caveat leading-none 
+    text-center text-lg 
+    xl:text-start xl:text-xl
+    text-soft-ink-blue 
+    transition-colors duration-200
+  }
+
+  .custom-section-nav-item:hover .custom-section-nav-item-label {
+    color: var(--section-nav-item-color);
+  }
+
+  .custom-section-nav-item[data-active="true"] .custom-section-nav-item-label {
+    color: var(--section-nav-item-color);
+  }
+  /* #endregion */
+}
