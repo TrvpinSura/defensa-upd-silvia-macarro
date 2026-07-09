@@ -16,7 +16,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/units-app-react-ts/",
+  base: "/defensa-upd-silvia-macarro/",
   build: {
     outDir: "docs",
   }
