@@ -8,6 +8,8 @@ import { HomePage } from "../units/pages/home/HomePage";
 import { UnitsPage } from "../units/pages/units/UnitsPage";
 import { UnitPage } from "@/units/pages/unit/UnitPage";
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 // export const appRouter = createHashRouter([
 export const appRouter = createBrowserRouter([
   // Main routes
@@ -41,6 +43,6 @@ export const appRouter = createBrowserRouter([
   }
 ],
   {
-    basename: import.meta.env.BASE_URL,
+    basename,
   }
 );
