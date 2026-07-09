@@ -2,7 +2,7 @@ import { useMemo } from "react";
 
 import { getUnitsByLevel } from "@/data/data.utils";
 
-import type { Level } from "@/data/levels";
+import type { Level } from "@/types/level.interface";
 
 interface Props {
   level: Level;

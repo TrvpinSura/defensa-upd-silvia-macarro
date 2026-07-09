@@ -2,7 +2,7 @@ import { useMemo } from "react";
 
 import { getCategoryById } from "@/data/data.utils";
 
-import type { categoryId } from "@/data/categories";
+import type { categoryId } from "@/types/category.interface";
 
 interface Props {
   id: categoryId;
