@@ -16,4 +16,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "/units-app-react-ts/",
+  build: {
+    outDir: "docs",
+  }
 });
