@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { createHashRouter, Navigate } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 
 import { MainLayout } from "../units/layouts/MainLayout";
 const UnitLayout = lazy(() => import('../units/layouts/UnitLayout'));
@@ -8,8 +8,8 @@ import { HomePage } from "../units/pages/home/HomePage";
 import { UnitsPage } from "../units/pages/units/UnitsPage";
 import { UnitPage } from "@/units/pages/unit/UnitPage";
 
-// export const appRouter = createBrowserRouter([
-export const appRouter = createHashRouter([
+// export const appRouter = createHashRouter([
+export const appRouter = createBrowserRouter([
   // Main routes
   {
     path: '/',
